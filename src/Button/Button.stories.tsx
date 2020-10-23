@@ -14,5 +14,6 @@ const Template = ({ children, ...rest }: IButton) => <Button {...rest}>{children
 export const SimpleButton = Template.bind({});
   
 SimpleButton.args = {
-    children: child
+    children: child,
+    rest: null
 }
