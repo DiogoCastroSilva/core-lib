@@ -13,7 +13,7 @@ const options: IModal = {
     children: 'Modal',
     minWidth: '300px',
     minHeight: '',
-    onClickModalBackdrop: () => {}
+    onBackdropClick: () => {}
 };
 
 const Template = (args: IModal) => <Modal {...args} />;
