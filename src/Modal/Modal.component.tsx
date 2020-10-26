@@ -11,6 +11,7 @@ type ModalSize = {
 
 export interface IModal extends ModalSize {
     children: ReactNode;
+    onClickModalBackdrop: () => void;
 };
 
 const BackdropContainer = styled.div`
@@ -42,9 +43,13 @@ const Modal: FC<IModal> = ({
     maxWidth = '320px',
     maxHeight = '600px',
     minWidth = '320px',
-    minHeight = null
+    minHeight = null,
+    onClickModalBackdrop
 }) => (
-    <BackdropContainer role='backdrop'>
+    <BackdropContainer
+        role='backdrop'
+        onClick={onClickModalBackdrop}
+    >
         <ModalContainer
             maxHeight={maxHeight}
             maxWidth={maxWidth}

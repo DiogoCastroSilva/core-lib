@@ -12,7 +12,8 @@ const options: IModal = {
     maxHeight: '300px',
     children: 'Modal',
     minWidth: '300px',
-    minHeight: ''
+    minHeight: '',
+    onClickModalBackdrop: () => {}
 };
 
 const Template = (args: IModal) => <Modal {...args} />;
