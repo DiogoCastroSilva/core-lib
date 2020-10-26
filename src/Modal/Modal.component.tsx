@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, ReactNode, MouseEvent } from 'react';
 import styled from 'styled-components';
 
 
@@ -11,7 +11,7 @@ type ModalSize = {
 
 export interface IModal extends ModalSize {
     children: ReactNode;
-    onBackdropClick: () => void;
+    onBackdropClick: (e: MouseEvent) => void;
 };
 
 const BackdropContainer = styled.div`
