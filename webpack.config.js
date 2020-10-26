@@ -1,7 +1,8 @@
 const path = require('path');
 
 module.exports = {
-    mode: 'none',
+    mode: 'production',
+    devtool: false,
     entry: {
         core: path.join(__dirname, 'src', 'index.tsx'),
     },
