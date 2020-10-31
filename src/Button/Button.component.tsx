@@ -27,8 +27,11 @@ const ButtonContainer = styled.button`
 `;
 
 
-const Button: FC<IButton> = ({ children, ...rest}) => (
-    <ButtonContainer {...rest}>
+const Button: FC<IButton> = ({ children, role='button', ...rest}) => (
+    <ButtonContainer
+        role={role}
+        {...rest}
+    >
         {children}
     </ButtonContainer>
 );
